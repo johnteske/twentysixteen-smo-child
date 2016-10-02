@@ -1,0 +1,60 @@
+/*
+ Theme Name:     Twenty Sixteen SMO Child Theme
+ Description:    Custom child theme for Seattle Modern Orchestra
+ Author:         John Teske
+ Template:       twentysixteen
+ Version:        1.0.0
+*/
+
+/* */
+/* testing only */
+@import 'https://fonts.googleapis.com/css?family=Lato';
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Lato', sans-serif;
+}
+/* .. and will need to add more .. */
+
+
+
+/* remove border */
+/* regardless of .custom-background-image */
+
+body:before,
+body:after,
+body:not(.custom-background-image):before,
+body:not(.custom-background-image):after {
+	height: 0;
+	width: 0;
+}
+
+.site {
+	margin: 0;
+}
+
+
+
+/* reduce site header top/bottom padding */
+
+.site-header {
+/* 	padding-top: 5%; */
+/* 	padding-bottom: 5%; */
+}
+
+
+
+/* remove widget top bar */
+
+.widget {
+	border-top: none;
+}
+
+
+
+/* widget title stop yelling */
+.widget .widget-title {
+	text-transform: none;
+}
