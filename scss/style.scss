@@ -1,0 +1,101 @@
+/*
+ Theme Name:     Twenty Sixteen SMO Child Theme
+ Description:    Custom child theme for Seattle Modern Orchestra
+ Author:         John Teske
+ Template:       twentysixteen
+ Version:        1.0.0
+*/
+
+/* @import for testing only */
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
+$font-stack: 'Lato', sans-serif;
+$font-color: #1a1a1a;
+$link-color: #db8827;
+$hover-color: #686868;
+
+//
+// Typography
+//
+// 3.0
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $font-stack;
+}
+// 11.4
+.required {
+	font-family: $font-stack;
+}
+
+//
+// Remove background border
+// regardless of .custom-background-image
+//
+// 14.1, 14.2
+body:before,
+body:after,
+body:not(.custom-background-image):before,
+body:not(.custom-background-image):after {
+	top: 0;
+	height: 0;
+	width: 0;
+}
+
+.site {
+	margin: 0;
+}
+
+
+//
+// reduce site header top/bottom padding
+//
+.site-header {
+// 	padding-top: 5%;
+// 	padding-bottom: 5%;
+}
+
+
+//
+// Simplify list styles
+//
+// 4.0
+ul,
+ol {
+	margin: 0 0 1.75em 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+
+//
+// widget top bar
+//
+// 10.0
+.widget {
+	border-top: 2px solid #eeeeee;
+}
+
+
+//
+// .widget-title stop yelling
+//
+// 10.0
+.widget .widget-title {
+	text-transform: none;
+}
+
+//
+// widget footer links
+//
+.content-bottom-widgets li a {
+	color: $hover-color;
+    &:hover {
+        color: $link-color;
+    }
+}
