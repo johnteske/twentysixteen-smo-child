@@ -1,3 +1,7 @@
+# system files
 .DS_Store
+
+# SCSS generated files
 .sass-cache
+style.css
 *.css.map
