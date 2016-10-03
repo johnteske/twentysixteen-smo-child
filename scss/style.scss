@@ -13,6 +13,9 @@ $font-stack: 'Lato', sans-serif;
 $font-color: #1a1a1a;
 $link-color: #db8827;
 $hover-color: #686868;
+$trans-time-std: 0.3s;
+
+@import 'mixins';
 
 //
 // Typography
@@ -98,5 +101,21 @@ ul {
 	color: $hover-color;
     &:hover {
         color: $link-color;
+    }
+}
+
+//
+// .button
+//
+a.button {
+	// 6.1
+	box-shadow: none;
+	//
+	border: 1px solid $link-color;
+	padding: 0.5em;
+	@include transition(background-color $trans-time-std, color $trans-time-std);
+    &:hover {
+	    background: $link-color;
+        color: #ffffff;
     }
 }
