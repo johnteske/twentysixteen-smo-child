@@ -28,6 +28,10 @@ body:not(.custom-background-image):after {
 .site {
   margin: 0; }
 
+.site-header {
+  padding-top: 2.625em;
+  padding-bottom: 2.625em; }
+
 ul,
 ol {
   margin: 0 0 1.75em 0;
