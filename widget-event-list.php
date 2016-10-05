@@ -21,7 +21,7 @@ $classes = $eo_event_loop_args['class'];
 				
 				$smo_ticket_url = get_post_meta($id, 'smo_ticket_url', true);
 				$smo_ticket_text = get_post_meta($id, 'smo_ticket_text', true) ?: "Buy Tickets";
-				$smo_time_note = get_post_meta($id, 'smo_time_note', true);
+				$smo_time_append = get_post_meta($id, 'smo_time_append', true);
 				
 				$smo_work_1_comp = get_post_meta($id, 'smo_work_1_comp', true);
 				$smo_work_1_title = get_post_meta($id, 'smo_work_1_title', true);
@@ -29,12 +29,18 @@ $classes = $eo_event_loop_args['class'];
 				$smo_work_2_title = get_post_meta($id, 'smo_work_2_title', true);
 				$smo_work_3_comp = get_post_meta($id, 'smo_work_3_comp', true);
 				$smo_work_3_title = get_post_meta($id, 'smo_work_3_title', true);
+				$smo_work_4_comp = get_post_meta($id, 'smo_work_4_comp', true);
+				$smo_work_4_title = get_post_meta($id, 'smo_work_4_title', true);
+				$smo_work_5_comp = get_post_meta($id, 'smo_work_5_comp', true);
+				$smo_work_5_title = get_post_meta($id, 'smo_work_5_title', true);
 
-				$smo_works = array(
-					$smo_work_1_comp => $smo_work_1_title,
-					$smo_work_2_comp => $smo_work_2_title,
-					$smo_work_3_comp => $smo_work_3_title
-				);
+				$smo_werks = [
+					[$smo_work_1_comp, $smo_work_1_title],
+					[$smo_work_2_comp, $smo_work_2_title],
+					[$smo_work_3_comp, $smo_work_3_title],
+					[$smo_work_4_comp, $smo_work_4_title],
+					[$smo_work_5_comp, $smo_work_5_title],
+				];
 			?>
 
 			<li class="<?php echo esc_attr( implode( ' ',$eo_event_classes ) ); ?>" >
@@ -44,9 +50,9 @@ $classes = $eo_event_loop_args['class'];
 				<p>
 				<?php echo eo_get_the_start( $format ); ?>
 
-				<?php if ( $smo_time_note ) : ?>
+				<?php if ( $smo_time_append ) : ?>
 					<br />							
-					<?php echo $smo_time_note; ?>
+					<?php echo $smo_time_append; ?>
 				<?php endif; ?>
 
 				<?php if ( eo_get_venue() ) : ?>
@@ -55,10 +61,12 @@ $classes = $eo_event_loop_args['class'];
 				<?php endif; ?>
 				</p>
 				
-				<ul>
+				<ul style="margin-left: 0">
 					<?php
-						foreach ($smo_works as $work_comp => $work_title) {
-					    	echo "<li><em>$work_title</em>, $work_comp</li>\n";
+						foreach ($smo_werks as $work_array) {
+							if( ! empty($work_array[0]) ) {
+						    	echo "<li><em>$work_array[1]</em>, $work_array[0]</li>\n";
+					    	}
 						}
 					?>
 				</ul><br />
@@ -66,6 +74,7 @@ $classes = $eo_event_loop_args['class'];
 				<?php if ( $smo_ticket_url ) : ?>				
 					<p><a class="button" href="<?php echo $smo_ticket_url; ?>"><?php echo $smo_ticket_text; ?></a></p>
 				<?php endif; ?>
+
 
 				<p><?php the_content(); ?></p>
 			</li>
