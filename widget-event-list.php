@@ -45,7 +45,7 @@ $classes = $eo_event_loop_args['class'];
 
 			<li class="<?php echo esc_attr( implode( ' ',$eo_event_classes ) ); ?>" >
 
-				<h3><a href="<?php echo eo_get_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<h3><?php the_title(); ?></h3>
 
 				<p>
 				<?php echo eo_get_the_start( $format ); ?>
@@ -57,7 +57,7 @@ $classes = $eo_event_loop_args['class'];
 
 				<?php if ( eo_get_venue() ) : ?>
 					<br/>
-					<a href="<?php eo_venue_link(); ?>"> <?php eo_venue_name(); ?></a>
+					<?php eo_venue_name(); ?>
 				<?php endif; ?>
 				</p>
 				
