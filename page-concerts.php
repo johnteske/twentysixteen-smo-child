@@ -21,7 +21,7 @@ get_header(); ?>
 		?>
 
 		<?php if ( is_active_sidebar( 'smo_concerts_upcoming' ) ) : ?>
-			<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+			<div id="primary-sidebar" class="primary-sidebar widget-area entry-content">
 				<?php dynamic_sidebar( 'smo_concerts_upcoming' ); ?>
 			</div><!-- #primary-sidebar -->
 		<?php endif; ?>
