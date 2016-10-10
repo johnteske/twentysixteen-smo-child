@@ -72,7 +72,7 @@ $classes = $eo_event_loop_args['class'];
 				</ul><br />
 				
 				<?php if ( $smo_ticket_url ) : ?>				
-					<p><a class="button" href="<?php echo $smo_ticket_url; ?>"><?php echo $smo_ticket_text; ?></a></p>
+					<p><a class="smo-button" href="<?php echo $smo_ticket_url; ?>"><?php echo $smo_ticket_text; ?></a></p>
 				<?php endif; ?>
 
 
