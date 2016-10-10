@@ -121,9 +121,9 @@ ul {
 }
 
 //
-// .button
+// .smo-button
 //
-a.button {
+a.smo-button {
 	// 6.1
 	box-shadow: none;
 	//
@@ -134,4 +134,12 @@ a.button {
 	    background: $link-color;
         color: #ffffff;
     }
+}
+
+//
+// .entry-title weight
+//
+// 3.0
+.entry-title {
+	font-weight: normal;
 }
