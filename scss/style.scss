@@ -153,3 +153,21 @@ a.smo-button {
 .entry-title {
 	font-weight: normal;
 }
+
+//
+// Homepage image width
+//
+@media screen and (min-width: 44.375em) and (max-width: 56.874em) { // max-width -0.001em
+	body.home.page .post-thumbnail {
+		// 11.2
+		// margin: 0 7.6923% 1.75em;
+		margin-right: 7.6923%;
+   }
+}
+@media screen and (min-width: 56.875em) {
+	body.home.page .content-area {
+	    float: left;
+		margin-right: 0;
+	    width: 100%;
+    }
+}
