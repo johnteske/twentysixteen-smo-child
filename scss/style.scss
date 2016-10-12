@@ -103,6 +103,16 @@ ul {
         color: $link-color;
     }
 }
+body.home.page .content-bottom-widgets li {
+	margin-bottom: 1em;
+	a {
+		color: $link-color;
+	    &:hover {
+        color: $hover-color;
+	    }
+    }
+}
+
 
 //
 //
