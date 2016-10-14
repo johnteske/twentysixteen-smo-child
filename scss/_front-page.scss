@@ -1,0 +1,53 @@
+//
+// homepage header bg test
+//
+$home_aspect: 0.5; // 2:1
+
+$break_point_list: 44.375em 48.9375em 56.875em 61.5625em 75em;
+
+$break_point_1: 44.375em;
+$break_point_2: 48.9375em;
+$break_point_3: 56.875em;
+$break_point_4: 61.5625em;
+$break_point_5: 75em;
+
+@function home-header-pad-bot($break_point_width){
+	@return $break_point_width * $home_aspect
+}
+// @mixin home-header-pad-mixin($break_point) {
+// 	@media screen and (min-width: $break_point) {
+// 		padding-bottom: home-header-pad-bot($break_point) }
+// }
+
+body.home.page header#masthead {
+	background-image: url('http://i0.wp.com/69.195.124.143/~seattmu9/wp-content/uploads/2016/10/SMO-pic-photo-credit-Amy-Vandergon-thin.jpg');
+	background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-bottom: home-header-pad-bot(nth($break_point_list, 1));
+    @each $break_point in $break_point_list {
+		@media screen and (min-width: $break_point) {
+			padding-bottom: home-header-pad-bot($break_point) }
+	}
+}
+
+body.home.page #site-navigation li.menu-item a {
+	color: white;
+    &:hover {
+        color: $link-color;
+    }	
+}
+
+body.home.page .menu-toggle {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+body.home.page #masthead > div > div.site-branding > a > img {
+	opacity: 0;
+}
+body.home.page #masthead > div > div.site-branding > a {
+	background-image: url('http://69.195.124.143/~seattmu9/wp-content/uploads/2016/10/smo-logo-flat-padding-all_white.png');
+	background-size: cover;
+}
