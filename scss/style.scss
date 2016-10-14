@@ -139,6 +139,7 @@ a.smo-button {
 	//
 	border: 1px solid $link-color;
 	padding: 0.5em;
+	padding-bottom: 0.625em;
 	@include transition(background-color $trans-time-std, color $trans-time-std);
     &:hover {
 	    background: $link-color;
