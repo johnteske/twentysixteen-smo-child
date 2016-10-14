@@ -8,72 +8,9 @@ function theme_enqueue_styles() {
     );
 }
 
+require_once( __DIR__ . '/includes/smo-logo-size.php');
 
-function smo_widgets_init() {
-
-	register_sidebar( array(
-		'name'          => 'SMO Homepage 1',
-		'id'            => 'smo_home_1',
-		'description'   => __( 'Home 1.', 'text_domain' ),
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => 'SMO Homepage 2',
-		'id'            => 'smo_home_2',
-		'description'   => __( 'Home 2.', 'text_domain' ),
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => 'SMO Concerts Upcoming',
-		'id'            => 'smo_concerts_upcoming',
-		'description'   => __( 'Lists upcoming events.', 'text_domain' ),
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	) );
-
-}
-add_action( 'widgets_init', 'smo_widgets_init' );
-
-
-add_action( 'after_setup_theme', 'child_custom_logo_setup', 11 );
-function child_custom_logo_setup() {
-	add_theme_support( 'custom-logo', array(
-		'height'      => 480,
-		'width'       => 480,
-		'flex-height' => true,
-	));
-}
-
-// Add [smo_button] Shortcode
-function smo_button_shortcode( $atts , $content = null ) {
-
-	// Attributes
-	$atts = shortcode_atts(
-		array(
-			'url' => '#',
-		),
-		$atts,
-		'smo_button'
-	);
-
-	// Return image HTML code
-	return '<a href="' . $atts['url'] . '" class="smo-button">' . $content . '</a>';
-
-}
-add_shortcode( 'smo_button', 'smo_button_shortcode' );
-
-
-
+require_once( __DIR__ . '/includes/smo-widget-areas.php');
 
 //
 // custom SMO event list widget
@@ -150,43 +87,4 @@ class smo_event_list extends WP_Widget {
     }
 }
 
-
-
-//
-// Add custom styles to TinyMCE
-//
-
-// Callback function to insert 'styleselect' into the $buttons array
-function my_mce_buttons_2( $buttons ) {
-	array_unshift( $buttons, 'styleselect' );
-	return $buttons;
-}
-// Register our callback to the appropriate filter
-add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
-// Callback function to filter the MCE settings
-function my_mce_before_init_insert_formats( $init_array ) {
-	// Define the style_formats array
-	$style_formats = array(
-		// Each array child is a format with it's own settings
-		array(
-			'title' => 'SMO callout',
-			'block' => 'div',
-			'classes' => 'smo-callout',
-			'wrapper' => true,
-
-		),
-        array(
-	        'title' => 'SMO button (apply to a link)',
-	        'selector' => 'a',
-	        'classes' => 'smo-button'
-        ),
-
-	);
-	// Insert the array, JSON ENCODED, into 'style_formats'
-	$init_array['style_formats'] = json_encode( $style_formats );
-
-	return $init_array;
-
-}
-// Attach callback to 'tiny_mce_before_init'
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+require_once( __DIR__ . '/includes/smo-tinymce-formats.php');
