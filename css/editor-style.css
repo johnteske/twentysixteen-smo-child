@@ -1,0 +1,10 @@
+a {
+	color: orange;
+}
+
+.smo-button {
+	color: orange;
+	text-decoration: none;
+	border: 1px solid orange;
+	padding: 0.5em;
+}
