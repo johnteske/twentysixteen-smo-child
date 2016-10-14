@@ -186,3 +186,13 @@ div.smo-callout {
 	font-size: 19px;
 	font-size: 1.1875rem;
 }
+
+//
+// search button (blog widget)
+//
+button.search-submit {
+	background: #d1d1d1;
+}
+input[type="search"]:focus {
+	border-color: #d1d1d1 !important; // override custom inline css
+}
