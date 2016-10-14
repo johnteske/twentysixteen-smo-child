@@ -9,7 +9,7 @@ if ( ! is_active_sidebar( 'smo_home_1' ) && ! is_active_sidebar( 'smo_home_2' ) 
 
 // If we get this far, we have widgets. Let's do this.
 ?>
-<aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
+<aside id="content-home-widgets" class="content-bottom-widgets" role="complementary">
 	<?php if ( is_active_sidebar( 'smo_home_1' ) ) : ?>
 		<div class="widget-area">
 			<?php dynamic_sidebar( 'smo_home_1' ); ?>
