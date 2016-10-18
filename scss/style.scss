@@ -10,10 +10,14 @@
 @import 'https://fonts.googleapis.com/css?family=Lato';
 
 $font-stack: 'Lato', sans-serif;
+
 $font-color: #1a1a1a;
 $link-color: #db8827;
 $hover-color: #686868;
+$light-color: #eeeeee;
+
 $trans-time-std: 0.3s;
+$light-border: 2px solid $light-color;
 
 @import 'mixins';
 
@@ -82,7 +86,7 @@ ul {
 //
 // 10.0
 .widget {
-	border-top: 2px solid #eeeeee;
+	border-top: $light-border;
 }
 
 
@@ -182,4 +186,19 @@ button.search-submit {
 }
 input[type="search"]:focus {
 	border-color: #d1d1d1 !important; // override custom inline css
+}
+
+//
+// mobile menu-toggle
+//
+.menu-toggle {
+	border: $light-border;
+	@include transition(border $trans-time-std, color $trans-time-std);
+}
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+    background-color: transparent;
+    border-color: $font-color;
+    color: $font-color;
 }
