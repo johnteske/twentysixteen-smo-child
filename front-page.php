@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+<div><?php twentysixteen_post_thumbnail(); ?></div>
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<?php
