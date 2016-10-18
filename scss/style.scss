@@ -133,6 +133,13 @@ body.home.page #content-home-widgets li {
 .entry-footer a:hover,
 .site-info a:hover {
 	box-shadow: none;
+	@include transition(color $trans-time-std);
+}
+
+@media screen and (min-width: 56.875em) {
+	.main-navigation a {
+		@include transition(color $trans-time-std);
+	}
 }
 
 //
