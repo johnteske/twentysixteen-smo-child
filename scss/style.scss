@@ -170,7 +170,7 @@ a.smo-button {
 //
 // homepage header bg test
 //
-//@import 'front-page';
+@import 'front-page';
 
 //
 // homepage three column widgets
@@ -183,6 +183,9 @@ a.smo-button {
 div.smo-callout {
 	font-size: 19px;
 	font-size: 1.1875rem;
+}
+body.home.page main {
+	margin-bottom: 3.5em;
 }
 
 //
