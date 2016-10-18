@@ -23,6 +23,16 @@
 	) );
 
 	register_sidebar( array(
+		'name'          => 'SMO Homepage 3',
+		'id'            => 'smo_home_3',
+		'description'   => __( 'Home 3.', 'text_domain' ),
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
 		'name'          => 'SMO Concerts Upcoming',
 		'id'            => 'smo_concerts_upcoming',
 		'description'   => __( 'Lists upcoming events.', 'text_domain' ),

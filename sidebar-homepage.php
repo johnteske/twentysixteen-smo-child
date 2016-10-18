@@ -21,4 +21,11 @@ if ( ! is_active_sidebar( 'smo_home_1' ) && ! is_active_sidebar( 'smo_home_2' ) 
 			<?php dynamic_sidebar( 'smo_home_2' ); ?>
 		</div><!-- .widget-area -->
 	<?php endif; ?>
+
+	<?php if ( is_active_sidebar( 'smo_home_3' ) ) : ?>
+		<div class="widget-area">
+			<?php dynamic_sidebar( 'smo_home_3' ); ?>
+		</div><!-- .widget-area -->
+	<?php endif; ?>
+
 </aside><!-- .content-bottom-widgets -->

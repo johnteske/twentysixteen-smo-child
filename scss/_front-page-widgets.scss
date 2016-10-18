@@ -1,0 +1,28 @@
+body.home.page {
+	.content-area {
+		width: 100%;
+	}
+	
+	@media screen and (min-width: 44.375em) {
+		.post-thumbnail, .entry-content {
+			margin-right: 7.1428571%;
+		}
+	}
+			
+	@media screen and (min-width: 56.875em) {
+		.post-thumbnail, .entry-content {
+			margin-right: 0;
+		}
+
+		.content-bottom-widgets .widget-area,
+		.content-bottom-widgets .widget-area {
+			float: left;
+			margin-right: 7.1428571%;
+			width: 28.5714286%; // 46.42857145%;
+		}
+		
+		.content-bottom-widgets .widget-area:nth-last-child(1):last-of-type {
+			margin-right: 0;
+		}
+	}
+}
