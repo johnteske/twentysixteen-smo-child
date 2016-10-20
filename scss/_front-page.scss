@@ -14,9 +14,9 @@ $break_point_list: 44.375em 48.9375em 56.875em 61.5625em 75em;
 
 	body.home.page {
 		header#masthead {
-			background-image: url('http://i0.wp.com/69.195.124.143/~seattmu9/wp-content/uploads/2016/10/SMO-pic-photo-credit-Amy-Vandergon-thin.jpg');
+			background-image: url($home-bg-url);
 			background-size: cover;
-		    background-position: center top;
+		    background-position: center -2em;
 		    background-repeat: no-repeat;
 		    padding-bottom: home-header-pad-bot(nth($break_point_list, 3)); // fixed height, for now
 			margin-bottom: 2.625em;
@@ -34,7 +34,7 @@ $break_point_list: 44.375em 48.9375em 56.875em 61.5625em 75em;
 			opacity: 0;
 		}
 		a.custom-logo-link {
-			background-image: url('http://69.195.124.143/~seattmu9/wp-content/uploads/2016/10/smo-logo-flat-padding-all_white.png');
+			background-image: url($home-logo-url);
 			background-size: cover;
 		}
 
