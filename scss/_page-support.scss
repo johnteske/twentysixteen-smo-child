@@ -1,0 +1,6 @@
+@media screen and (max-width: nth($break_point_list, 1)) {
+	body.page.page-id-12 .alignright {
+		width: 100%;
+		margin: 0.375em 0 1.75em 0; // left: 1.75em;
+	}
+}

@@ -1,7 +1,5 @@
 $home_aspect: 0.5; // 2:1
 
-$break_point_list: 44.375em 48.9375em 56.875em 61.5625em 75em;
-
 @function home-header-pad-bot($break_point_width){
 	@return $break_point_width * $home_aspect
 }

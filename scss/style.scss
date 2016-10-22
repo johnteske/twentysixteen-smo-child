@@ -6,6 +6,8 @@
  * Version:        1.0.0
  */
 
+$break_point_list: 44.375em 48.9375em 56.875em 61.5625em 75em;
+
 $font-stack: 'Lato', Geneva, Tahoma, sans-serif;
 
 $font-color: #1a1a1a;
@@ -213,3 +215,8 @@ input[type="search"]:focus {
     border-color: $font-color;
     color: $font-color;
 }
+
+//
+// full-width thumbnails on mobile
+//
+//@import 'page-support';
