@@ -1,0 +1,26 @@
+//
+// Remove background border
+// regardless of .custom-background-image
+//
+// 14.1, 14.2
+body:before,
+body:after,
+body:not(.custom-background-image):before,
+body:not(.custom-background-image):after {
+	top: 0;
+	height: 0;
+	width: 0;
+}
+
+.site {
+	margin: 0;
+}
+
+//
+// reduce site header top/bottom padding
+//
+// 11.1
+.site-header {
+	padding-top: 2.625em;
+	padding-bottom: 2.625em;
+}

@@ -1,0 +1,40 @@
+//
+// Typography
+//
+// 3.0
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $font-stack;
+}
+// 11.4
+.required {
+	font-family: $font-stack;
+}
+
+//
+// Simplify list styles
+//
+// 4.0
+ul,
+ol {
+	margin: 0 0 1.75em 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+//
+// .smo-callout
+//
+div.smo-callout {
+	font-size: 19px;
+	font-size: 1.1875rem;
+}
+body.home.page main {
+	margin-bottom: 3.5em;
+}

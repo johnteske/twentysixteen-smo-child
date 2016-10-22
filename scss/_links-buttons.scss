@@ -1,0 +1,83 @@
+//
+// links
+//
+// 6.1
+.entry-content a,
+.entry-summary a,
+.taxonomy-description a,
+.logged-in-as a,
+.comment-content a,
+.pingback .comment-body > a,
+.textwidget a,
+.entry-footer a:hover,
+.site-info a:hover {
+	box-shadow: none;
+	@include transition(color $trans-time-std);
+}
+
+@media screen and (min-width: 56.875em) {
+	.main-navigation a {
+		@include transition(color $trans-time-std);
+	}
+}
+
+//
+// widget footer links
+//
+.content-bottom-widgets li a {
+	color: $hover-color;
+    &:hover {
+        color: $link-color;
+    }
+}
+body.home.page #content-home-widgets li {
+	margin-bottom: 1em;
+	a {
+		color: $link-color;
+	    &:hover {
+        color: $hover-color;
+	    }
+    }
+}
+
+//
+// .smo-button
+//
+a.smo-button {
+	// 6.1
+	box-shadow: none;
+	//
+	border: 1px solid $link-color;
+	padding: 0.5em;
+	padding-bottom: 0.625em;
+	@include transition(background-color $trans-time-std, color $trans-time-std);
+    &:hover {
+	    background: $link-color;
+        color: #ffffff;
+    }
+}
+
+//
+// search button (blog widget)
+//
+button.search-submit {
+	background: #d1d1d1;
+}
+input[type="search"]:focus {
+	border-color: #d1d1d1 !important; // override custom inline css
+}
+
+//
+// mobile menu-toggle
+//
+.menu-toggle {
+	border: $light-border;
+	@include transition(border $trans-time-std, color $trans-time-std);
+}
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+    background-color: transparent;
+    border-color: $font-color;
+    color: $font-color;
+}

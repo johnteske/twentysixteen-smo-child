@@ -1,0 +1,26 @@
+//
+// widget top bar
+//
+// 10.0
+.widget {
+	border-top: $light-border;
+}
+
+
+//
+// .widget-title stop yelling
+//
+// 10.0
+.widget .widget-title {
+	text-transform: none;
+	font-weight: normal;
+}
+
+
+//
+// .entry-title weight
+//
+// 3.0
+.entry-title {
+	font-weight: normal;
+}
