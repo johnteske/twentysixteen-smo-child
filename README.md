@@ -2,9 +2,6 @@
 
 ## Compile styles
 
-`sass --watch scss/style.scss:style.css`
---style compressed
-
 `[smo_button url="#"]Button Text[/smo_button]`
 
 write blog posts in WP as to avoid strange formatting issues.
