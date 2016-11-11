@@ -12,10 +12,7 @@ $home_aspect: 0.5; // 2:1
 
 	body.home.page {
 		header#masthead {
-			background-image: url($home-bg-url);
-			background-size: cover;
-		    background-position: center -2em;
-		    background-repeat: no-repeat;
+			background: #111111 url($home-bg-url) center -2em/cover no-repeat;
 		    padding-bottom: home-header-pad-bot(nth($break_point_list, 3)); // fixed height, for now
 			margin-bottom: 2.625em;
 		}
