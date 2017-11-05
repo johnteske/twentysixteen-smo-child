@@ -5,10 +5,10 @@ global $eo_event_loop,$eo_event_loop_args;
 $id      = ( $eo_event_loop_args['id'] ? 'id="'.$eo_event_loop_args['id'].'"' : '' );
 $classes = $eo_event_loop_args['class'];
 ?>
-			
+
 <?php if ( $eo_event_loop->have_posts() ) :  ?>
 
-	<ul <?php echo $id; ?> class="<?php echo esc_attr( $classes );?>" > 
+	<ul <?php echo $id; ?> class="<?php echo esc_attr( $classes );?>" >
 
 		<?php while ( $eo_event_loop->have_posts() ) :  $eo_event_loop->the_post(); ?>
 
@@ -18,11 +18,11 @@ $classes = $eo_event_loop_args['class'];
 
 				//For non-all-day events, include time format
 				$format = eo_get_event_datetime_format();
-				
+
 				$smo_ticket_url = get_post_meta($id, 'smo_ticket_url', true);
 				$smo_ticket_text = get_post_meta($id, 'smo_ticket_text', true) ?: "Buy Tickets";
 				$smo_time_append = get_post_meta($id, 'smo_time_append', true);
-				
+
 				$smo_work_1_comp = get_post_meta($id, 'smo_work_1_comp', true);
 				$smo_work_1_title = get_post_meta($id, 'smo_work_1_title', true);
 				$smo_work_2_comp = get_post_meta($id, 'smo_work_2_comp', true);
@@ -51,7 +51,7 @@ $classes = $eo_event_loop_args['class'];
 				<?php echo eo_get_the_start( $format ); ?>
 
 				<?php if ( $smo_time_append ) : ?>
-					<br />							
+					<br />
 					<?php echo $smo_time_append; ?>
 				<?php endif; ?>
 
@@ -60,18 +60,18 @@ $classes = $eo_event_loop_args['class'];
 					<?php eo_venue_name(); ?>
 				<?php endif; ?>
 				</p>
-				
+
 				<ul style="margin-left: 0">
 					<?php
 						foreach ($smo_werks as $work_array) {
 							if( ! empty($work_array[0]) ) {
-						    	echo "<li><em>$work_array[1]</em>, $work_array[0]</li>\n";
+								echo "<li><strong>$work_array[0]</strong>, <em>$work_array[1]</em></li>\n";
 					    	}
 						}
 					?>
 				</ul><br />
-				
-				<?php if ( $smo_ticket_url ) : ?>				
+
+				<?php if ( $smo_ticket_url ) : ?>
 					<p><a class="smo-button" href="<?php echo $smo_ticket_url; ?>"><?php echo $smo_ticket_text; ?></a></p>
 				<?php endif; ?>
 
@@ -85,7 +85,7 @@ $classes = $eo_event_loop_args['class'];
 
 <?php elseif ( ! empty( $eo_event_loop_args['no_events'] ) ) :  ?>
 
-	<ul id="<?php echo esc_attr( $id );?>" class="<?php echo esc_attr( $classes );?>" > 
+	<ul id="<?php echo esc_attr( $id );?>" class="<?php echo esc_attr( $classes );?>" >
 		<li class="eo-no-events" > <?php echo $eo_event_loop_args['no_events']; ?> </li>
 	</ul>
 
